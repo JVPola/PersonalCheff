@@ -16,13 +16,23 @@ Segue a lista de tarefas a serem desenvolvidas no projeto:
 Criar: python -m venv .\venv\
 Ativar: venv\Scripts\activate
 ```
-- [ ] Instalar o Django
+- [X] Instalar o Django
 ```
 python -m pip install django==3.2
 ```
-- [ ] Criar o projeto PersonalCheff
-- [ ] Subir o servidor e testar o projeto
-- [ ] Alterar o idioma para `pt-br`
+- [X] Criar o projeto PersonalCheff
+```
+django-admin.py startproject PersonalCheffProj
+```
+- [X] Subir o servidor e testar o projeto
+```
+entrar na pasta do projeto: cd personalCheffProj
+python manage.py runserver
+```
+- [X] Alterar o idioma para `pt-br`
+```
+pasta "settings.py" trocar idioma na linha 106 
+```
 - [ ] Alterar o timezone do projeto para `America/São_paulo`
 - [ ] Criar o APP receitas
 - [ ] Registrar o APP receitas
