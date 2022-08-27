@@ -17,6 +17,9 @@ Criar: python -m venv .\venv\
 Ativar: venv\Scripts\activate
 ```
 - [ ] Instalar o Django
+```
+python -m pip install django==3.2
+```
 - [ ] Criar o projeto PersonalCheff
 - [ ] Subir o servidor e testar o projeto
 - [ ] Alterar o idioma para `pt-br`
