@@ -33,8 +33,15 @@ python manage.py runserver
 ```
 pasta "settings.py" trocar idioma na linha 106 
 ```
-- [ ] Alterar o timezone do projeto para `America/São_paulo`
-- [ ] Criar o APP receitas
+- [X] Alterar o timezone do projeto para `America/São_paulo`
+```
+pasta "settings.py" trocar trocar timezone linha 108 America/Sao_Paulo
+```
+- [X] Criar o APP receitas
+```
+* Preciso estar dentro da pasta d projeto (PersonalCheffProj)
+python manage.py startapp receitas
+```
 - [ ] Registrar o APP receitas
 - [ ] Configurar o rota inicial (index)
 - [ ] Criar a view para a rota inicial 
