@@ -42,9 +42,12 @@ pasta "settings.py" trocar trocar timezone linha 108 America/Sao_Paulo
 * Preciso estar dentro da pasta d projeto (PersonalCheffProj)
 python manage.py startapp receitas
 ```
-- [ ] Registrar o APP receitas
-- [ ] Configurar o rota inicial (index)
-- [ ] Criar a view para a rota inicial 
+- [X] Registrar o APP receitas
+```
+pasta "settings.py" na linha 33 (INSTALLED_APPS) adicionar 'receitas'
+```
+- [X] Configurar o rota inicial (index)
+- [x] Criar a view para a rota inicial 
 - [ ] criar o arquivo index
 
 ## 📝 Licença
