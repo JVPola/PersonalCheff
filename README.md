@@ -26,7 +26,7 @@ django-admin.py startproject PersonalCheffProj
 ```
 - [X] Subir o servidor e testar o projeto
 ```
-entrar na pasta do projeto: cd personalCheffProj
+entrar na pasta do projeto (para entrar na pasta): cd personalCheffProj
 python manage.py runserver
 ```
 - [X] Alterar o idioma para `pt-br`
@@ -46,10 +46,40 @@ python manage.py startapp receitas
 ```
 pasta "settings.py" na linha 33 (INSTALLED_APPS) adicionar 'receitas'
 ```
-- [X] Configurar o rota inicial (index)
-- [x] Criar a view para a rota inicial 
-- [ ] criar o arquivo index
+- [X] Configurar a rota inicial (index)
+```
+na pasta "receitas" criar o arquivo urls.py
 
+from platform import python_branch
+
+from django.urls import path
+from. import views
+
+urlpatterns = [
+    path('', views.index, name='index')
+]
+```
+- [x] Criar a view para a rota inicial 
+```
+Dentro da pasta receitas(app) abrir o arquivo 'view'
+
+from django.shortcuts import render
+
+def index(request):
+    return HttpResponse("<h1>Seja bem vindo</h1>")
+```
+- [ ] criar o arquivo index
+```
+-Dentro da pasta receitas(app), crie a pasta `templates`
+-Dentro da pasta templates, crie seus arquivos HTML, começando pelo index.html
+-No arquivo views.py que esta dentro da pasta do app(receitas) faça a seguinte alteração no codigo:
+
+from django.shortcuts import render
+
+def index(request):
+    return render(request,'index.html')
+
+```
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 [⬆ Voltar ao topo](#nome-do-projeto)<br>
