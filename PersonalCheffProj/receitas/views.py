@@ -5,3 +5,12 @@ def index(request):
 
 def sucodelaranja(request):
     return render(request,'sucodelaranja.html')
+
+def sucodelimao(request):
+    return render(request,'sucodelimao.html')
+
+def sucodemanga(resquest):
+    return render(resquest,'sucodemanga.html')
+
+def sucodeabacaxi(resquest):
+    return render(resquest,'sucodeabacaxi.html')
