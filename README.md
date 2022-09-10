@@ -71,13 +71,50 @@ def index(request):
 - [ ] criar o arquivo index
 ```
 -Dentro da pasta receitas(app), crie a pasta `templates`
--Dentro da pasta templates, crie seus arquivos HTML, começando pelo index.html
+-
+Dentro da pasta templates, crie seus arquivos HTML, começando pelo index.html
 -No arquivo views.py que esta dentro da pasta do app(receitas) faça a seguinte alteração no codigo:
 
 from django.shortcuts import render
 
 def index(request):
     return render(request,'index.html')
+
+- [X]Integrar arquivos estáticos (CSS, JS, IMG)
+```
+- Dentro da pasta projeto (PersonalCheffProj) criar a pasta `static`
+- Dentro da pasta static , colocar as imagens, os arquivos css e os arquivos js que for utilizar
+- no arquivo settings.py realize a importação da biblioteca "os" atraves do comando "import os"
+- na linha 58 adicione o caminho dos templates da seguinte forma :
+``` 'DIRS': [os.path.join(BASE_DIR, 'receitas/templates')], ```
+- No final do arquivo, apos a linha `STATIC_URL` insira o codigo:
+```
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'PersonalCheffProj/static')
+]
+```
+- `STATIC_URL`: é a configuração da rota através do qual os arquivos estáticos seram servidos
+- `STATIC_ROOT`: configuração da pasta de saida(destino) dos arquivos estáticos
+- `STATICFILES_DIRS`: configuração da(s) pasta de origem dos arquivos estáticos
+- após realizar essas configurções execute, no terminal(command prompt) o comando `python manage.py collectstatic`
+
+- na primeira linha do arquivo `index.html` insira `{% load static %}`. esse comando deve ser usado em todos os arquivos que voce for utilizar arquivos estáticos 
+- insira uma imagem utilizando o comando <img src="{% static 'logo.jpg' %}" width  ="50">. sempre que for utilizar o arquivo estático voce deve utilizar `{% static 'nome-do-arquivo' %}` 
+
+```
+- []Usando links
+- []Criando o base.html
+- []Separando em parciais
+- []Renderizando dados dinamicamente
+- []Criando um dicionário com as receitas
+- []Criando o banco de dados(MySQL/MariaDB)
+- []Instalando o conector do bando de dados MySQL
+- []Criando o modelo da receita
+- []Criando uma migração (mapeamento)
+- []Realizando uma migração
+- []Registrando um modelo no admin
+- []Criando um usuário para o ambiente administrativo
 
 ```
 ## 📝 Licença
