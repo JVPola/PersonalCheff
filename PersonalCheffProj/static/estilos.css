@@ -19,3 +19,7 @@ body {
     height: 20px;
 }
 
+a.voltar {
+    font-size: 40px;
+    color: #ffffff;
+}

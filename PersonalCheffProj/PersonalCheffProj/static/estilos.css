@@ -2,11 +2,12 @@ body {
     background: #cacaca;
     color: #181818;
     font-family: 'Segoe UI';
-    text-align: center;
+
 }
 
 .imagem-logo {
     width: 100px;
+
 }
 
 .tabela-receitas {
@@ -17,4 +18,12 @@ body {
 
 .icone-suco {
     height: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
 }

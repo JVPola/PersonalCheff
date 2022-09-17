@@ -108,7 +108,35 @@ STATICFILES_DIRS = [
 Para criar um link para a pagina index, independente de onde voce esteja utilize o comando `url` ex:
 <a href= "{% url 'index' %}">Pagina inicial</a>
 ```
-- []Criando o base.html
+- [X]Criando o base.html
+```
+- Na pasta `templates`crie o arquivo `base.html` esse arquivo contém todo o codigo de estrutura comum à todas as paginas. Nesse arquivo deve ficar tudo que tiver antes do `body` e tudo que tiver depois do `/body`. 
+- Nesse arquivo deve conter o `{% load static %}` 
+- nesse arquivo, no local aonde será carregado o conteúdo das outras páginas, deve exixtir os delimitadores `{% block content %}` e `{% endblock %}
+
+- O código do `base.html` será algo parecido com:
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonalCheff</title>
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+    <link rel="shortcut icon" href="{% static 'logo.jpg' %}" type="image/x-icon">
+</head>
+
+<body>
+   {% block content %}
+   
+   {% endblock %}
+</body>
+
+</html>
+```
+
 - []Separando em parciais
 - []Renderizando dados dinamicamente
 - []Criando um dicionário com as receitas
