@@ -103,7 +103,11 @@ STATICFILES_DIRS = [
 - insira uma imagem utilizando o comando <img src="{% static 'logo.jpg' %}" width  ="50">. sempre que for utilizar o arquivo estático voce deve utilizar `{% static 'nome-do-arquivo' %}` 
 
 ```
-- []Usando links
+- [X]Usando links
+```
+Para criar um link para a pagina index, independente de onde voce esteja utilize o comando `url` ex:
+<a href= "{% url 'index' %}">Pagina inicial</a>
+```
 - []Criando o base.html
 - []Separando em parciais
 - []Renderizando dados dinamicamente
