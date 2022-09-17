@@ -20,10 +20,17 @@ body {
     height: 20px;
 }
 
-h1 {
+
+
+footer {
     text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    padding: 3px;
+    margin-top: 50px;
 }
 
-h2 {
-    text-align: center;
+footer a {
+    color: pink;
 }
