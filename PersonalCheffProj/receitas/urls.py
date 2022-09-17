@@ -7,4 +7,7 @@ urlpatterns = [
     path('sucodelimao', views.sucodelimao, name='sucodelimao'),
     path('sucodemanga', views.sucodemanga, name='sucodemanga'),
     path('sucodeabacaxi', views.sucodeabacaxi, name='sucodeabacaxi')
+    path('contato', views.contato, name='contato'),
     ]
+
+

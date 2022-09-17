@@ -14,3 +14,6 @@ def sucodemanga(resquest):
 
 def sucodeabacaxi(resquest):
     return render(resquest,'sucodeabacaxi.html')
+    
+def contato(resquest):
+    return render(resquest,'contato.html')
