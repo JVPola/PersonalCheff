@@ -192,6 +192,9 @@ def index(request):
 -Dentro do PHPMyAdimin, click no botão 'novo' ára criar um banco de dados, insira o nome 'personalcheff_bd'
 ```
 - []Instalando o conector do bando de dados MySQL
+```
+- 
+```
 - []Criando o modelo da receita
 - []Criando uma migração (mapeamento)
 - []Realizando uma migração
