@@ -184,7 +184,13 @@ def index(request):
             </tr>
             {% endfor %}
 ```
-- []Criando o banco de dados(MySQL/MariaDB)
+- [X]Criando o banco de dados(MySQL/MariaDB)
+```
+-Abra o XAMPP e start o serviço do apache e MySQL 
+-Click no botão admin do apache
+-Acesse o link PHPMyAdimin
+-Dentro do PHPMyAdimin, click no botão 'novo' ára criar um banco de dados, insira o nome 'personalcheff_bd'
+```
 - []Instalando o conector do bando de dados MySQL
 - []Criando o modelo da receita
 - []Criando uma migração (mapeamento)
