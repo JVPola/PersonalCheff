@@ -68,7 +68,7 @@ from django.shortcuts import render
 def index(request):
     return HttpResponse("<h1>Seja bem vindo</h1>")
 ```
-- [ ] criar o arquivo index
+- [X] criar o arquivo index
 ```
 -Dentro da pasta receitas(app), crie a pasta `templates`
 -
@@ -145,8 +145,45 @@ Para criar um link para a pagina index, independente de onde voce esteja utilize
 - Para incluir as partials nos arquivos de destino utilize o comando `incluide` da seguinte maneira: `{% incluide 'partials/header.html' %} 
 ```
 
-- []Renderizando dados dinamicamente
-- []Criando um dicionário com as receitas
+- [X]Renderizando dados dinamicamente
+```
+- Trocar as informações fixas no arquivo html por informações dinamicas vindas do arquivo python.
+- Quero gerar uma lista de receitas de forma dinâmica, vamos fazer isso utilizando o recurso de Django que passa por uma informação para minhas templates(.html) atraves da passagem de um parametro no comando `render` que esta em minha view(.py): return render(request, ' index.html', {'nome_da_receita':'suco de laranja})
+-Observe que passei atraves do comando `render` um `dicionario` para a template. Na minha template(`index.html`) eu posso exibir o conteúdo desse dicionário da seguinte forma: <td><img src="{% static 'suco.png' %}" class="icone-suco">{{nome_da_receita}}>/td>
+- Vale a pena diferenciar o uso de `{{}}` e `{% %}`:
+
+```
+- [X]Criando um dicionário com as receitas
+```
+def index(request):
+    receitas = {
+        1:'Suco de Melão',
+        2:'Pizza',
+        3:'Suco de Limão',
+        4:"Pastel"
+    }
+
+    dados = {
+        'lista_receitas' : receitas
+    }
+    return render(request,'index.html', dados)
+
+```
+```
+- Na template index.html, eu faço um laço de repetição que verifica cada item da lista de receitas à cada passagem do laço:
+  {% for chave, uma_receita in lista_receitas.items %}
+            <tr>
+                <td>
+                    <img src="{% static 'suco.png' %}" class="icone-suco">
+                    
+                    {{uma_receita}}>
+
+                </td>
+                <td><a href="https://www.youtube.com/watch?v=Nn9140bDPnc">Ver video</a></td>
+                <td><a href="{% url 'sucodelaranja' %}">Ver receita completa</a></td>
+            </tr>
+            {% endfor %}
+```
 - []Criando o banco de dados(MySQL/MariaDB)
 - []Instalando o conector do bando de dados MySQL
 - []Criando o modelo da receita

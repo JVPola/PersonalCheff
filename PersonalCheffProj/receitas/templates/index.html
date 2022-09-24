@@ -2,48 +2,26 @@
 {% load static %}
 {% block content %}
 {% include 'partials/header.html' %}
-
-        <table border="1" class="tabela-receitas">
+{% include 'partials/menu.html' %}
+        <table border="1" class="tabela-receitas ">
             <tr>
                 <th>Receitas</th>
                 <th>Videos</th>
                 <th>Ações</th>
             </tr>
+            {% for chave, uma_receita in lista_receitas.items %}
             <tr>
                 <td>
                     <img src="{% static 'suco.png' %}" class="icone-suco">
-                    Suco de laranja
+                    
+                    {{uma_receita}}>
+
                 </td>
                 <td><a href="https://www.youtube.com/watch?v=Nn9140bDPnc">Ver video</a></td>
                 <td><a href="{% url 'sucodelaranja' %}">Ver receita completa</a></td>
             </tr>
-
-            <tr>
-                <td>
-                    <img src="{% static 'suco.png' %}" class="icone-suco">
-                    Suco de limao
-                </td>
-                <td><a href="https://www.youtube.com/watch?v=7aavIewcSY4">Ver video</a></td>
-                <td><a href="{% url 'sucodelimao' %}">Ver receita completa</a></td>
-            </tr>
-
-            <tr>
-                <td>
-                    <img src="{% static 'suco.png' %}" class="icone-suco">
-                    Suco de manga
-                </td>
-                <td><a href="https://www.youtube.com/watch?v=_NEMzwhsKDs">Ver video</a></td>
-                <td><a href="{% url 'sucodemanga' %}">Ver receita completa</a></td>
-            </tr>
-
-            <tr>
-                <td>
-                    <img src="{% static 'suco.png' %}" class="icone-suco">
-                    Suco de abacaxi
-                </td>
-                <td><a href="https://www.youtube.com/watch?v=jLmFRuPv2eo">Ver video</a></td>
-                <td><a href="{% url 'sucodeabacaxi' %}">Ver receita completa</a></td>
-            </tr>
+            {% endfor %}
+            
         </table>
         
 {% include 'partials/footer.html' %}

@@ -1,7 +1,17 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request,'index.html')
+    receitas = {
+        1:'Suco de Melão',
+        2:'Pizza',
+        3:'Suco de Limão',
+        4:"Pastel"
+    }
+
+    dados = {
+        'lista_receitas' : receitas
+    }
+    return render(request,'index.html', dados)
 
 def sucodelaranja(request):
     return render(request,'sucodelaranja.html')
