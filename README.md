@@ -235,9 +235,12 @@ class receitas (models.Model):
 
 No terminal digite: python manage.py migrate
 ```
-- []Registrando um modelo no admin
-- []Criando um usuário para o ambiente administrativo
-
+- [X]Criando um usuário para o ambiente administrativo
+```
+-O DJANGO já cria o ambiente administrativo para nossa aplicação, ficandi esse ambiente em: http://127.0.0.1:8000/admin/ 
+-Para utilizar o ambiente administrativo precisamos criar um usuario de acesso. No terminal digite: python manage.py createsuperuser
+-OBS: quando digitar a senha, ela vai ficar em branco 
+```
 ```
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
