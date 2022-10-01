@@ -229,7 +229,12 @@ class receitas (models.Model):
 -Preparar todas as models criadas para serem migradas para o banco de dados
 -No terminal digite "python manage.py makemigrations"
 ```
-- []Realizando uma migração
+- [X]Realizando uma migração
+```
+-Realizar migração é criar fisicamente no banco de dados as tabelas preparadas anteriormente, e, no nosso caso, as tabelas preparadas pelo django para o seu ambiente administrativo
+
+No terminal digite: python manage.py migrate
+```
 - []Registrando um modelo no admin
 - []Criando um usuário para o ambiente administrativo
 
