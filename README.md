@@ -193,7 +193,22 @@ def index(request):
 ```
 - []Instalando o conector do bando de dados MySQL
 ```
-- 
+-pip install mysqlclient 
+-Se der acesso negado tente: python -m pip install mysqlclient
+```
+
+- [X]Configurar a conexão com mysql
+```
+No arquivo "settings.py", na linha 78 configurar a conexão para o seu banco de dados como no exemplo:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'personalcheff_bd',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
 ```
 - []Criando o modelo da receita
 - []Criando uma migração (mapeamento)
