@@ -210,8 +210,25 @@ DATABASES = {
         'PORT': '3306',
     }
 ```
-- []Criando o modelo da receita
-- []Criando uma migração (mapeamento)
+- [X]Criando o modelo da receita
+```
+-Model é a representação das tabelas no banco de dados. Cada classe em uma model equivale a uma tabela.
+-No arquivo "receitas\models.py" crie a classe para a representação da tabela de receitas:
+class receitas (models.Model):
+
+    nome_receita = models.CharField(max_length=100)
+    video = models.CharField(max_length=80)
+    modo_preparo = models.TextField()
+    ingredientes = models.TextField()
+    nota = models.TextField()
+    data_receita = models.DateTimeField(default=datetime.now, blank=True) 
+
+```
+- [X]Criando uma migração (mapeamento)
+```
+-Preparar todas as models criadas para serem migradas para o banco de dados
+-No terminal digite "python manage.py makemigrations"
+```
 - []Realizando uma migração
 - []Registrando um modelo no admin
 - []Criando um usuário para o ambiente administrativo
