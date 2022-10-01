@@ -6,5 +6,5 @@ class receitas (models.Model):
     video = models.CharField(max_length=80)
     modo_preparo = models.TextField()
     ingredientes = models.TextField()
-    nota = models.TextField()
+    nota = models.IntegerField()
     data_receita = models.DateTimeField(default=datetime.now, blank=True) 

@@ -241,6 +241,18 @@ No terminal digite: python manage.py migrate
 -Para utilizar o ambiente administrativo precisamos criar um usuario de acesso. No terminal digite: python manage.py createsuperuser
 -OBS: quando digitar a senha, ela vai ficar em branco 
 ```
+- [X]Registrando um modelo admin
+```
+-Para criar o módulo referente ao nosso APP no ambiente administrativo, precisamos registrar nossos modelos no adimin.
+-Abra o arquivo receitas\admin.py e registre seu modelo:
+from django.contrib import admin
+from. models import receitas
+
+# Register your models here.
+admin.site.register(receitas)
+```
+- []Trazendo os dados do banco de dados
+- []Exibição da páginas individuais de cada receitas 
 ```
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
